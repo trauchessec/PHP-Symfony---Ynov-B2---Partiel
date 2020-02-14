@@ -1,4 +1,4 @@
-# PHP-Symfony - Ynov-B2 - Partiel
+# PHP-Symfony - Ynov-B2 - Partiel / Romain Trauchessec
 
 ## Questions :
 
