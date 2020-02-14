@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des annonces de voitures{% endblock %}
+
+{% block body %}
+    <h1>Liste des annonces de voitures</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>City</th>
+                <th>Cart_year</th>
+                <th>Nb_km</th>
+                <th>Nb_days</th>
+                <th>Price</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for advert in adverts %}
+            <tr>
+                <td>{{ advert.id }}</td>
+                <td>{{ advert.title }}</td>
+                <td>{{ advert.description }}</td>
+                <td>{{ advert.city }}</td>
+                <td>{{ advert.cartYear }}</td>
+                <td>{{ advert.nbKm }}</td>
+                <td>{{ advert.nbDays }}</td>
+                <td>{{ advert.price }}</td>
+                <td>
+                    <a href="{{ path('advert_show', {'id': advert.id}) }}">show</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
