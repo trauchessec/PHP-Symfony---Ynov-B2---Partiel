@@ -24,7 +24,7 @@ php app/console debug:router
 La variable app
 
 ### Question 8 :
-
+doctrine:schema:update
 
 ### Question 9 :
 php bin/console make:controller
